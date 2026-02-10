@@ -1,16 +1,43 @@
 
 # D365 Finance & Operations  
-## Greenlane Database – Data Entity Catalog (Table View)
+## Greenlane Database – Data Entity Catalog
 
-This version of the catalog presents all data entities in a compact, tabular format
-to simplify maintenance and allow easy extension as new entities are added.
+---
+
+## 1. Purpose of This Document
+
+This document provides a business-oriented overview of the data entities included in the Greenlane Dynamics 365 Finance & Operations (FinOps) database delivered as part of the data hand-off.
+
+The objective is to help the receiving organization understand:
+- What type of business data is available
+- What each data entity represents
+- How entities relate to one another
+- Which entities are native to FinOps and which are custom extensions
+
+This document is intentionally non-technical and designed for management, finance, operations, and business intelligence users.
+
+---
+
+## 2. Scope & Design Notes
+
+- The database contains a curated subset of FinOps Data Entities.
+- It is intended for reporting, analytics, and operational visibility.
+- Data is historical and transactional in nature.
+- Custom entities exist to simplify reporting, enforce compliance, and support business-specific logic.
+- Custom entities are clearly identified.
+
+---
+
+## 3. Timeframe
+
+- The data corresponds to records and transactions starting 2021. Data prior to this date can be found in the NetSuite Greenlane and KushCo Archive Databases.
 
 ---
 
 ## Data Entity Inventory
 
-| Domain | Entity Name | Type | Record Type | Description |
-|------|-------------|------|-------------|-------------|
+| Domain | Entity Name | Type | Record Type | Description | Related Entity | Key
+|------|-------------|------|-------------|-------------|---------|-----|
 | Customers & Parties | CustCustomerV3Staging | Native | Customers | Customer master data including account, status, and classification. Related to sales orders, invoices, and customer transactions. |
 | Customers & Parties | CustCustomerGroupEntityStaging | Native | Customers | Customer group definitions used for segmentation, pricing, and reporting. |
 | Customers & Parties | DirPartyV2Staging | Native | Global | Core party records shared across customers, vendors, and workers. |
