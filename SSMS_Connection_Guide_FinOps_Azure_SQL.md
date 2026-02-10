@@ -50,7 +50,7 @@ Use the following settings in SSMS:
 Ensure you are using the correct database before querying.
 
 ```sql
-USE [YourDatabaseNameHere];
+USE [GNLN-D365-Archive];
 GO
 ```
 
