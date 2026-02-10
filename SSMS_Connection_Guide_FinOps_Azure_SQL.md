@@ -11,7 +11,7 @@ Before you begin, ensure you have:
 
 - **SQL Server Management Studio (SSMS)** installed  
   Download: https://learn.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms
-- Network access to the Azure SQL server
+- Network access to the Azure SQL server. You'll need the **HQ-Legacy-ERP-vnet** VPN installed on your machine to access the database
 - Valid database credentials (provided separately)
 
 ---
