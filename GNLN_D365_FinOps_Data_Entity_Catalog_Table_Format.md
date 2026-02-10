@@ -1,6 +1,8 @@
 
 # Greenlane Database – Data Entity Catalog
 
+---
+
 ## 1. Purpose of This Document
 
 This document provides a business-oriented overview of the data entities included in the Greenlane Dynamics 365 Finance & Operations (FinOps) database delivered as part of the data hand-off.
