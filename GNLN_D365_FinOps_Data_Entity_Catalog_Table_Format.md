@@ -127,7 +127,43 @@ This document is intentionally non-technical and designed for management, financ
 | Legal, Compliance & Trade | NmbINTHarmonizeStaging | Native | Trade | International harmonized trade data | EcoResReleasedProductV2Staging | ITEMNUMBER |
 | Legal, Compliance & Trade | NmbWHSHarmonizedStaging | Native | Trade | Warehouse harmonized trade mappings | EcoResReleasedProductV2Staging | ITEMNUMBER |
 
-
 ---
+
+## 5. Company Scope & Legal Entity Context
+
+The data contained in this database spans **multiple legal entities (companies)** within the Dynamics 365 Finance & Operations environment.
+
+The following companies are represented:
+
+- **WHG**
+- **VWD**
+- **ARI**
+- **SHVT**
+
+Each record in transactional and master data tables is associated with a specific company through the **`DATAAREAID`** field.
+
+### How to Interpret Company-Specific Data
+
+- `DATAAREAID` identifies the **legal entity** to which a record belongs.
+- Most analytical queries should **explicitly filter by `DATAAREAID`** to ensure results reflect the intended company.
+- When no filter is applied, query results may include **data from multiple companies**, which can lead to overstated totals or mixed operational context.
+
+### Best Practices for Reporting and Analysis
+
+- Always include `DATAAREAID` in:
+  - WHERE clauses
+  - GROUP BY logic
+  - Report-level filters
+- Treat `DATAAREAID` as a **mandatory dimension** for financial, sales, inventory, and operational reporting.
+- For cross-company analysis, intentionally aggregate across multiple `DATAAREAID` values and clearly label outputs accordingly.
+
+### Example
+
+```sql
+SELECT *
+FROM SalesInvoiceHeaderV2Staging
+WHERE DATAAREAID = 'WHG';
+```
+
 
 End of Document.
