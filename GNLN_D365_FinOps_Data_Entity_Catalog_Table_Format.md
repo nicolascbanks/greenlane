@@ -1,6 +1,5 @@
 
-# D365 Finance & Operations  
-## Greenlane Database – Data Entity Catalog
+# Greenlane Database – Data Entity Catalog
 
 ---
 
